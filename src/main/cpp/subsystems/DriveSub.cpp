@@ -8,6 +8,10 @@ DriveSub::DriveSub(){
     rght = new ctre::phoenix::motorcontrol::can::TalonSRX(3);
     rght_follow = new ctre::phoenix::motorcontrol::can::TalonSRX(4);
     rght_follow->Follow(&rght,ctre::phoenix::motorcontrol::FollowerType::FollowerType_PercentOutput);
+    this->stop_drive();
+
+    timer.Reset();
+    timer.Start();
 }
 
 
@@ -31,14 +35,33 @@ void DriveSub::drive(double x, double w, double max_percent){
     return;
 }
 
-void DriveSub::auto_drive(int code){
+void DriveSub::auto_drive(int code, double val1, double val2){
     if(code=="left"){
-
+        this->stop_drive();
     }else if(code=="rght"){
-        
+        this->stop_drive();
     }else if(code=="back"){
--
+        // I don't sure if double() can use
+        if(double(timer.Get())>val1){
+            if(double(timer.Get()<val2)){
+                this->drive(-1.0,0.0,0.5);
+            }else{
+                this->stop_drive();
+            }
+        }else{
+            this->stop_drive();
+        }
     }else{
-
+        this->stop_drive();
     }
+    return;
+}
+
+void DriveSub::init_drive(){
+    left->Set(ctre::phoenix::motorcontrol::ControlMode::Disabled,0.0);
+    rght->Set(ctre::phoenix::motorcontrol::ControlMode::Disabled,0.0);
+    left->ConfigFactoryDefault();
+    left_follow->ConfigFactoryDefault();
+    rght->ConfigFactoryDefault();
+    rght_follow->ConfigFactoryDefault();
 }

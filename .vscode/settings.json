@@ -18,6 +18,22 @@
   "C_Cpp.errorSquiggles": "Disabled",
   "files.associations": {
     "cmath": "cpp",
-    "complex": "cpp"
+    "complex": "cpp",
+    "string": "cpp",
+    "core": "cpp",
+    "matrixfunctions": "cpp",
+    "*.tcc": "cpp",
+    "chrono": "cpp",
+    "ctime": "cpp",
+    "future": "cpp",
+    "iomanip": "cpp",
+    "limits": "cpp",
+    "numeric": "cpp",
+    "ratio": "cpp",
+    "streambuf": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "utility": "cpp",
+    "*.inc": "cpp"
   }
 }
