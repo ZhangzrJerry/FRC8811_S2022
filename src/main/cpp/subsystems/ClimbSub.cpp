@@ -13,3 +13,7 @@ void ClimbSub::control(bool code){
     a->Set(code);
     b->Set(code);
 }
+
+void ClimbSub::climbinit(){
+    this->control(false);
+}
