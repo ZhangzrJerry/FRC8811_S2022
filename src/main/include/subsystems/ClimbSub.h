@@ -10,8 +10,8 @@ class ClimbSub{
      * @param
      * @param code: true伸出、false收回
      */
-    inline void control(bool code);
+    void control(bool code);
  private:
     frc::Solenoid* a;
     frc::Solenoid* b;
-}
+};

@@ -5,6 +5,10 @@ class DriveSub{
  public:
    DriveSub();
    ~DriveSub();
+   /**
+    * @brief 初始化底盘程序
+    */
+   void init_drive();
    void drive(double x, double w, double max_percent);
    /**
     * @brief 自动阶段程序
