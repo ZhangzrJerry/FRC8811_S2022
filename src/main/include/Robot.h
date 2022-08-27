@@ -6,7 +6,7 @@
 
 #include <frc/TimedRobot.h>
 #include <frc2/command/Command.h>
-
+#include "commands/RoboCom.h"
 #include "RobotContainer.h"
 
 class Robot : public frc::TimedRobot {
@@ -27,6 +27,6 @@ class Robot : public frc::TimedRobot {
   // Have it null by default so that if testing teleop it
   // doesn't have undefined behavior and potentially crash.
   frc2::Command* m_autonomousCommand = nullptr;
-
+  RoboCom YiZhongRen;
   RobotContainer m_container;
 };

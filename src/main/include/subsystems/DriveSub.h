@@ -31,5 +31,5 @@ class DriveSub{
    ctre::phoenix::motorcontrol::can::TalonSRX* left_follow;
    ctre::phoenix::motorcontrol::can::TalonSRX* rght;
    ctre::phoenix::motorcontrol::can::TalonSRX* rght_follow;
-   frc::Timer timer{};
+   frc::Timer timer;
 };

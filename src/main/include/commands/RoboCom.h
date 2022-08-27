@@ -17,13 +17,13 @@ class RoboCom{
     /**
      * 爬升子系统
      */
-    ClimbSub CSub{};
+    ClimbSub CSub;
     /**
      * 收球子系统,按F拾取
      */
-    CollectSub FSub{};
+    CollectSub FSub;
     /**
      * 底盘子系统
      */
-    DriveSub DSub{};
+    DriveSub DSub;
 };
