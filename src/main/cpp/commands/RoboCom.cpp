@@ -15,7 +15,7 @@ void RoboCom::init_com(){
 }
 
 void RoboCom::auto_com(){
-    DSub.auto_drive(0,0.0,4.0);
+    DSub.auto_drive(0,10.0,3.0);
 }
 
 void RoboCom::tele_com(){
