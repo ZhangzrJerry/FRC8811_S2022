@@ -9,7 +9,7 @@ class DriveSub{
     * @brief 初始化底盘程序
     */
    void init_drive();
-   void drive(double x, double w, double max_percent);
+   void drive(double x, double w, double max_percent=0.5);
    /**
     * @brief 自动阶段程序
     * @param

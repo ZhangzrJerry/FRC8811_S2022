@@ -24,8 +24,8 @@ void DriveSub::drive(double x, double w, double max_percent){
         left_speed = x - w;
         rght_speed = x + w;
     }
-    double max_speed = left_speed > rght_speed ? left_speed : rght_speed;
-    double k_speed = max_percent / max_speed;
+    double max_speed = fabs(left_speed) > fabs(rght_speed) ? left_speed : rght_speed;
+    double k_speed = fabs(max_percent) / max_speed;
     left->Set(ControlMode::PercentOutput,+direct*left_speed*k_speed);
     rght->Set(ControlMode::PercentOutput,-direct*rght_speed*k_speed);
     return;
