@@ -26,5 +26,5 @@ void CollectSub::iscollect(bool code){
 
 void CollectSub::collect_init(){
     this->m_stop();
-    this->
+    this->iscollect(false);
 }
