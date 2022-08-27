@@ -1,6 +1,6 @@
 #pragma once
 #include "subsystems/ClimbSub.h"
-#include "subsystems/CollectSub.h"
+// #include "subsystems/CollectSub.h"
 #include "subsystems/DriveSub.h"
 #include <frc/Joystick.h>
 
@@ -19,9 +19,9 @@ class RoboCom{
      */
     ClimbSub CSub;
     /**
-     * 收球子系统,按F拾取
-     */
-    CollectSub FSub;
+   //   * 收球子系统,按F拾取
+   //   */
+   //  CollectSub FSub;
     /**
      * 底盘子系统
      */

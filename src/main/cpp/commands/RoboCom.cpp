@@ -9,7 +9,7 @@ RoboCom::~RoboCom(){
 }
 
 void RoboCom::init_com(){
-    FSub.collect_init();
+    // FSub.collect_init();
     CSub.climbinit();
     DSub.stop_drive();
 }
@@ -36,13 +36,13 @@ void RoboCom::tele_com(){
         }
     }
 
-    // 吸球操控部分
-    if(m_stick->GetRawButton(4)){
-        FSub.changecollect();
-    }
-    if(FSub.getcollect()){
-        FSub.m_turn(0.3*(m_stick->GetRawAxis(2)-0.5));
-    }
+    // // 吸球操控部分
+    // if(m_stick->GetRawButton(4)){
+    //     FSub.changecollect();
+    // }
+    // if(FSub.getcollect()){
+    //     FSub.m_turn(0.3*(m_stick->GetRawAxis(2)-0.5));
+    // }
 }
 
 double RoboCom::filter(double x){
