@@ -36,11 +36,11 @@ void DriveSub::drive(double x, double w, double max_percent){
 }
 
 void DriveSub::auto_drive(int code, double val1, double val2){
-    if(code=="left"){
+    if(code==+1){
         this->stop_drive();
-    }else if(code=="rght"){
+    }else if(code==-1){
         this->stop_drive();
-    }else if(code=="back"){
+    }else if(code==0){
         // I don't sure if double() can use
         if(double(timer.Get())>val1){
             if(double(timer.Get()<val2)){

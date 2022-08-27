@@ -14,7 +14,7 @@ class CollectSub{
      * @param code: true为正转、false为反转
      * @param output: 百分比输出功率
      */
-    void m_turn(bool code, double output=0.15);
+    void m_turn(double output = -0.15);
     /**
      * 停止转动
      */
@@ -25,6 +25,14 @@ class CollectSub{
      * @param code: true为伸出、false为收回
      */
     void iscollect(bool code);
+    /**
+     * 改变气缸状态
+     */
+    void changecollect();
+    /**
+     * 获取气缸状态
+     */
+    bool getcollect();
  private:
     rev::CANSparkMax* m_collect;
     frc::Solenoid* s_collect;

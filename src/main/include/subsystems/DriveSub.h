@@ -3,7 +3,6 @@
 #include <cmath>
 //我个人感觉其实这个timer和joystick理应同级，从robocom中抽出作为全局信息生产者，当然这里的timer可以是独属于底盘的子timer
 #include <frc/Timer.h>
-#include <string>
 
 using namespace units;
 
@@ -19,9 +18,9 @@ class DriveSub{
    /**
     * @brief 自动阶段程序
     * @param
-    * @param code "left","rght","back","stay&back:stay out of this function"
+    * @param code "left:+1","rght:-1","back:0"
     */
-   void auto_drive(string code, double val1=0, double val2 = 0);
+   void auto_drive(int code, double val1=0, double val2 = 0);
  private:
    /**
     * @brief 机器人方向

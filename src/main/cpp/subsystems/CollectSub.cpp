@@ -9,10 +9,8 @@ CollectSub::~CollectSub(){
 
 }
 
-void CollectSub::m_turn(bool code, double output){
-    double percent = fabs(output);
-    double direct = code ? +1.0 : -1.0 ;
-    m_collect->Set(direct*percent);
+void CollectSub::m_turn(double output){
+    m_collect->Set(output);
 }
 
 void CollectSub::m_stop(){
@@ -27,4 +25,12 @@ void CollectSub::iscollect(bool code){
 void CollectSub::collect_init(){
     this->m_stop();
     this->iscollect(false);
+}
+
+void CollectSub::changecollect(){
+    s_collect->Set(!s_collect->Get());
+}
+
+void CollectSub::getcollect(){
+    return s_collect->Get();
 }

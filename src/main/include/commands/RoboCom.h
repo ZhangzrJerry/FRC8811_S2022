@@ -1,7 +1,7 @@
 #pragma once
-#include "../subsystems/ClimbSub.h"
-#include "../subsystems/CollectSub.h"
-#include "../subsystems/DriveSub.h"
+#include "subsystems/ClimbSub.h"
+#include "subsystems/CollectSub.h"
+#include "subsystems/DriveSub.h"
 #include <frc/Joystick.h>
 
 class RoboCom{
@@ -13,13 +13,13 @@ class RoboCom{
     void tele_com();
  private:
     double filter(double x);
-    frc::Joystick stick{0};
+    frc::Joystick *m_stick = new frc::Joystick(0);
     /**
      * 爬升子系统
      */
     ClimbSub CSub{};
     /**
-     * 收球子系统
+     * 收球子系统,按F拾取
      */
     CollectSub FSub{};
     /**
